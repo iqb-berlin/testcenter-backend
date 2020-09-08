@@ -25,6 +25,15 @@ test-e2e:
 init-dev-config:
 	cp docker/.env-default docker/.env
 
+tag-major:
+	scripts/new_version.py major
+
+tag-minor:
+	scripts/new_version.py minor
+
+tag-patch:
+	scripts/new_version.py patch
+
 build-image:
 	docker build --target prod -t iqbberlin/testcenter-backend -f docker/Dockerfile .
 
