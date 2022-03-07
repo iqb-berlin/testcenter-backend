@@ -172,6 +172,10 @@ try  {
 
     CLI::h2("Workspaces");
 
+    if (!file_exists(DATA_DIR)) {
+        mkdir(DATA_DIR);
+    }
+
     $initializer = new WorkspaceInitializer();
 
     if ($installationArguments->overwrite_existing_installation) {
@@ -235,10 +239,6 @@ try  {
         CLI::success("Sample content files created.");
 
         $workspaceIds[] = $sampleWorkspaceId;
-    }
-
-    if (!file_exists(DATA_DIR)) {
-      mkdir(DATA_DIR);
     }
 
     CLI::h2("Sys-Admin");
