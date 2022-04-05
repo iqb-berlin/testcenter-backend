@@ -1,7 +1,7 @@
 {
   "name": "iqb/testcenter-api",
   "description": "IQB-Testcenter (Backend)",
-  "version": "12.2.2",
+  "version": "12.2.3",
   "extra": {
     "broadcastingServiceVersionExpected": "4.0.0"
   },
