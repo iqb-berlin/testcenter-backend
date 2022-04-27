@@ -1,10 +1,19 @@
 # Changelog & Upgrade Information
 
-## next
-Bugfixes:
+## 12.3.0
+### Bugfixes
 * (#366) Fix: In live-mode the group-monitor didn't update when Testtakers.XMLs get updated or deleted.
 
+### Result-Data / Group-Monitor 
+* (#231) Logins of the same name (created with `hot-run-restart`-mode) get now a number into there display-name to be 
+ distinguishable. In result/log-data export, this number is stored in the field `code`. 
+
 ## 12.2.3
+### Bugfixes
+* Fix critical bug in communication between broadcasting-service and backend
+
+## 12.2.1
+Set a maximum for filenames in workspace of 120 characters.
 
 ## 12.0.2
 Fixes data-migration from versions before 12.0.0. With the update to version 12.0.0 the way, response-data is stored
