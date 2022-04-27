@@ -1,5 +1,11 @@
 # Changelog & Upgrade Information
 
+## next
+Bugfixes:
+* (#366) Fix: In live-mode the group-monitor didn't update when Testtakers.XMLs get updated or deleted.
+
+## 12.2.3
+
 ## 12.0.2
 Fixes data-migration from versions before 12.0.0. With the update to version 12.0.0 the way, response-data is stored
 changed. Data from existing units should be migrated, but that might fail in some installations. With this patch
