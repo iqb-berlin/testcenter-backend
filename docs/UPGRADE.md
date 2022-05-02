@@ -1,5 +1,9 @@
 # Changelog & Upgrade Information
 
+## 12.3.3
+### Bugfixes
+* (#239, #238) Fix file reading issues in initialization
+
 ## 12.3.0
 ### Bugfixes
 * (#366) Fix: In live-mode the group-monitor didn't update when Testtakers.XMLs get updated or deleted.
