@@ -39,7 +39,7 @@ class WorkspaceValidatorTest extends TestCase{
         require_once "classes/helper/XMLSchema.class.php";
         require_once "classes/helper/TimeStamp.class.php";
         require_once "classes/helper/FileTime.class.php";
-        require_once "classes/helper/FileTime.class.php";
+        require_once "classes/helper/FileExt.class.php";
         require_once "classes/files/File.class.php";
         require_once "classes/files/XMLFile.class.php";
         require_once "classes/files/XMLFileSysCheck.class.php";
@@ -50,6 +50,7 @@ class WorkspaceValidatorTest extends TestCase{
         require_once "classes/workspace/Workspace.class.php";
         require_once "classes/workspace/WorkspaceValidator.class.php";
 
+        require_once "unit-tests/mock-classes/ZIPMock.php";
         require_once "unit-tests/mock-classes/PasswordMock.php";
 
         $this->workspaceDaoMock = Mockery::mock('overload:' . WorkspaceDAO::class);
@@ -108,8 +109,8 @@ class WorkspaceValidatorTest extends TestCase{
             ],
             'Unit/unit-unused-and-missing-ref.xml' => [
                 new ValidationReportEntry('warning', 'Unit is never used'),
-                new ValidationReportEntry('warning', "File has no link to XSD-Schema. Current version (`$version`) will be used instead."),
-                new ValidationReportEntry('error', 'definitionRef `not-existing.voud` not found')
+                new ValidationReportEntry('error', 'Resource `not-existing.voud` not found'),
+                new ValidationReportEntry('warning', "File has no link to XSD-Schema. Current version (`$version`) will be used instead.")
             ],
             'Resource/resource-unused.voud' => [
                 new ValidationReportEntry('warning', 'Resource is never used'),
@@ -129,6 +130,9 @@ class WorkspaceValidatorTest extends TestCase{
             ],
             'Resource/verona-player-simple-4.0.0.html' => [
                 new ValidationReportEntry('info', 'Verona-Version: 4.0')
+            ],
+            'Resource/sample_resource_package.itcr.zip' => [
+                new ValidationReportEntry('info', 'Contains 0 files.')
             ]
         ];
 

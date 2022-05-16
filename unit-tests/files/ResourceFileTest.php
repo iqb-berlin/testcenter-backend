@@ -77,6 +77,7 @@ class ResourceFileTest extends TestCase {
         require_once "classes/files/ResourceFile.class.php";
         require_once "classes/helper/FileName.class.php";
         require_once "classes/helper/FileTime.class.php";
+        require_once "classes/helper/FileExt.class.php";
         require_once "classes/helper/Version.class.php";
         require_once "classes/helper/JSON.class.php";
 
