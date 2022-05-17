@@ -1,5 +1,27 @@
 # Changelog & Upgrade Information
 
+## 12.4.3
+### New Feature: so called resource-packages. 
+Uploaded zip files with the extension .itcr.zip - resource-packages - now get a special treatment:
+  1. All files they contain are regarded as resources (Testtakers.xml and such would be handled as resources to).
+  2. These files do NOT appear in the file list, not do the get validated
+  3. Deleting the package causes all those files to be deleted.
+This can be used for special resources which shall be loaded by the player via *directDowlaodURL*. But pay attention:
+Those get neither preloaded like the rest of the booklet nor do they count into the size of the calculation of the test!
+Example applications: GeoeGebra (needs to fetch 70+ files), or large videos which shall be streamed.
+  
+You can declare now dependencies of Units to some resource-files or -packages in the unit.xml to make the validator
+aware of it:
+```
+  <Dependencies>
+    <File>sample_resource_package.itcr.zip</File>
+  </Dependencies>
+```
+
+
+### Bugfixes
+* (#388) Fix various bugs in the context of the Zip-File Upload
+
 ## 12.3.3
 ### Bugfixes
 * (#239, #238) Fix file reading issues in initialization
