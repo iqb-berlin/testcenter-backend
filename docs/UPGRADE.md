@@ -1,7 +1,7 @@
 # Changelog & Upgrade Information
 
 ## 12.4.3
-### New Feature: so called resource-packages. 
+### New Feature: so-called resource-packages. 
 Uploaded zip files with the extension .itcr.zip - resource-packages - now get a special treatment:
   1. All files they contain are regarded as resources (Testtakers.xml and such would be handled as resources to).
   2. These files do NOT appear in the file list, not do the get validated
@@ -18,9 +18,10 @@ aware of it:
   </Dependencies>
 ```
 
-
 ### Bugfixes
-* (#388) Fix various bugs in the context of the Zip-File Upload
+* (#241) Fix a bug which occurred, when a Booklet was assigned to a Login with mode='monitor-group'.
+* (#388) Fix various bugs in the context of the Zip-File Upload.
+
 
 ## 12.3.3
 ### Bugfixes
