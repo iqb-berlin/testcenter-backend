@@ -1,6 +1,6 @@
 # Changelog & Upgrade Information
 
-## 12.4.3
+## 12.4.0
 ### New Feature: so-called resource-packages. 
 Uploaded zip files with the extension .itcr.zip - resource-packages - now get a special treatment:
   1. All files they contain are regarded as resources (Testtakers.xml and such would be handled as resources to).
