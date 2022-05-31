@@ -286,7 +286,7 @@ class AdminDAO extends DAO {
                         (string) $testSession['name_suffix'],
                     )
                 ),
-                TimeStamp::fromSQLFormat($testSession['test_timestamp_server']),
+                $testSession['test_timestamp_server']
             );
             $sessionChangeMessage->setTestState(
                 $testState,
@@ -553,7 +553,7 @@ class AdminDAO extends DAO {
                 "numUnitsMax" => (int) $groupStats["num_units_max"],
                 "numUnitsTotal" => (int) $groupStats["num_units_total"],
                 "numUnitsAvg" => (float) $groupStats["num_units_mean"],
-                "lastChange" => TimeStamp::fromSQLFormat($groupStats["lastchange"])
+                "lastChange" => $groupStats["lastchange"]
             ];
         }, $resultStats);
     }
