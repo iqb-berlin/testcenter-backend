@@ -286,7 +286,7 @@ class AdminDAO extends DAO {
                         (string) $testSession['name_suffix'],
                     )
                 ),
-                $testSession['test_timestamp_server']
+                (int) $testSession['test_timestamp_server']
             );
             $sessionChangeMessage->setTestState(
                 $testState,
