@@ -45,7 +45,9 @@ RUN a2dissite 000-default
 COPY docker/scripts/vhost.conf /etc/apache2/sites-available
 RUN a2ensite vhost
 RUN echo "ServerName localhost" >> /etc/apache2/conf-available/servername.conf \
-&& a2enconf servername
+  && a2enconf servername
+COPY docker/scripts/security.conf /etc/apache2/conf-available
+RUN a2enconf security
 
 # set up php
 COPY docker/scripts/local.php.ini /usr/local/etc/php/conf.d/local.ini
