@@ -1,5 +1,11 @@
 # Changelog & Upgrade Information
 
+## 12.5.0
+* Update PHP from 7.4.29 to 8.1.0
+
+## 12.4.1
+* Update PHP from 7.4.22 to 7.4.29 (patch) and Apache to 2.4.53 
+
 ## 12.4.0
 ### New Feature: so-called resource-packages. 
 Uploaded zip files with the extension .itcr.zip - resource-packages - now get a special treatment:
