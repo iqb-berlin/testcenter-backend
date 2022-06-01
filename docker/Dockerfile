@@ -1,7 +1,7 @@
-ARG PHP_VERSION=7.4.22
+ARG PHP_VERSION=7.4.29
 
 FROM php:${PHP_VERSION} AS backend-composer
-
+RUN php -v
 RUN apt-get update && apt-get install -y \
   zlib1g-dev \
   libzip-dev \
