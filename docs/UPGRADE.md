@@ -1,5 +1,8 @@
 # Changelog & Upgrade Information
 
+## [next]
+* radically speed up initialization and tests
+
 ## 12.5.0
 * Update PHP from 7.4.29 to 8.1.0
 
