@@ -534,7 +534,7 @@ paths:
                                     - broadcastingService
                                     - appConfig
                             example:
-                                version: 12.5.0
+                                version: 12.4.2
                                 customTexts: {}
                                 appConfig: {}
                                 broadcastingService:
@@ -618,7 +618,7 @@ paths:
                     content:
                         application/json:
                             example:
-                                version: 12.5.0
+                                version: 12.4.2
     /workspaces:
         get:
             summary: 'get a list of workspaces'

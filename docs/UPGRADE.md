@@ -1,10 +1,7 @@
 # Changelog & Upgrade Information
 
-## [next]
-* radically speed up initialization and tests
-
-## 12.5.0
-* Update PHP from 7.4.29 to 8.1.0
+## 12.4.2
+* radically speed up initialization and tests and fix workspace loading issues
 
 ## 12.4.1
 * Update PHP from 7.4.22 to 7.4.29 (patch) and Apache to 2.4.53 
